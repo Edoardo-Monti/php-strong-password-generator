@@ -1,4 +1,5 @@
 <?php
+include_once __DIR__ . '/variables.php';
 
 function generaPasswordCasuale($lunghezza) {
     //creiamo una stringa con tutti i simboli che vogliamo utilizzare

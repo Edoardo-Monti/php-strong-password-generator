@@ -23,8 +23,7 @@ Dare all’utente anche la possibilità di permettere o meno la ripetizione di c
 
 
 
-$sceltaLength = $_GET['passwordLength'];
-var_dump($sceltaLength);
+
 
 include __DIR__ . '/include/partials/function.php';
 
