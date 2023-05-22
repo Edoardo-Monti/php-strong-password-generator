@@ -25,10 +25,10 @@ Dare all’utente anche la possibilità di permettere o meno la ripetizione di c
 
 
 
-include __DIR__ . '/include/partials/function.php';
-session_start();
+// include __DIR__ . '/include/partials/function.php';
+// session_start();
 
-$_SESSION['password'] = generaPasswordCasuale($sceltaLength);
+// $_SESSION['password'] = generaPasswordCasuale($sceltaLength);
 ?>
 
 <!DOCTYPE html>
@@ -48,18 +48,33 @@ $_SESSION['password'] = generaPasswordCasuale($sceltaLength);
     <div class="w-75 mx-auto bg-color-pink pt-5">
         <form class="row g-3" action="./include/components/index.php" method="GET">
             <div class="col-auto">
-                <h4>Lunghezza password</h4>
+                <h4>Inserisci la lunghezza :</h4>
             </div>
             <div class="col-auto">
                 <label for="inputPassword2" class="visually-hidden"> Password</label>
-                <input type="text" class="form-control" id="inputPassword2" placeholder="Lunghezza Password" name="passwordLength">
+                <input type="text" class="form-control" id="inputPassword2" placeholder="Lunghezza Password"
+                    name="passwordLength">
             </div>
             <div class="col-auto">
                 <button type="submit" class="btn btn-primary mb-3">Genera psw</button>
             </div>
+
+            <div>
+                <h5>scegli da cosa è composta la tua password:</h5>
+                <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" name="numeri">
+                    <label class="btn btn-outline-primary" for="btncheck1">Numeri</label>
+    
+                    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" name="lettere">
+                    <label class="btn btn-outline-primary" for="btncheck2">Lettere</label>
+    
+                    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" name="simboli">
+                    <label class="btn btn-outline-primary" for="btncheck3">Simboli</label>
+                </div>
+            </div>
         </form>
 
-        
+
     </div>
 
 

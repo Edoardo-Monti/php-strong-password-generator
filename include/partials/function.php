@@ -1,7 +1,21 @@
 <?php
-include_once __DIR__ . '/variables.php';
+include __DIR__ . '/variables.php';
 
 function generaPasswordCasuale($lunghezza) {
+    //condizioni per scelta della password
+    $sceltaComposizione = ''; 
+    if( $numeri1 == true){
+        $numeriScelta = '0123456789';
+        $sceltaComposizione .= $numeriScelta;
+    };
+    if( $lettere1 == true){
+        $lettereScelta = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $sceltaComposizione .= $lettereScelta;
+    };
+    if( $simboli1 == true){
+        $simboliScelta = '!?@#$%*-_';
+        $sceltaComposizione .= $simboliScelta;
+    };
     //creiamo una stringa con tutti i simboli che vogliamo utilizzare
     $caratteri = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?@#$%*-_';
     //prendiamo la lunghezza della stringa

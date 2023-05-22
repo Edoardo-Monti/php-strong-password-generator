@@ -1,3 +1,6 @@
 <?php
 $sceltaLength = $_GET['passwordLength'];
-var_dump($sceltaLength);
+$numeri1 = $_GET['numeri'];
+$lettere1 = $_GET['lettere'];
+$simboli1 = $_GET['simboli'];
+?>

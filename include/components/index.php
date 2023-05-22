@@ -1,7 +1,5 @@
 <?php
-include __DIR__ . '/../partials/variables.php';
-
-session_start();
+include __DIR__ . '/../partials/function.php';
 
 
 ?>
@@ -15,6 +13,6 @@ session_start();
     <title>Document</title>
 </head>
 <body>
-    <p> <?php echo $_SESSION['password']; ?> </p>
+    <p>la tua password è:  <?php echo generaPasswordCasuale($sceltaLength) ?> </p>
 </body>
 </html>
