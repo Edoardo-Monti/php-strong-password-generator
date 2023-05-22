@@ -11,14 +11,20 @@ function generaPasswordCasuale() {
     if( $numeri == true){
         $numeriScelta = '0123456789';
         $sceltaComposizione .= $numeriScelta;
+    }else{
+        $sceltaComposizione .= '';
     };
     if( $lettere == true){
         $lettereScelta = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $sceltaComposizione .= $lettereScelta;
+    }else{
+        $sceltaComposizione .= '';
     };
     if( $simboli == true){
         $simboliScelta = '!?@#$%*-_';
         $sceltaComposizione .= $simboliScelta;
+    }else{
+        $sceltaComposizione .= '';
     };
     //creiamo una stringa con tutti i simboli che vogliamo utilizzare
     // $caratteri = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?@#$%*-_';
