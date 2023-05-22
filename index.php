@@ -26,6 +26,30 @@ Dare all’utente anche la possibilità di permettere o meno la ripetizione di c
 $sceltaLength = $_GET['passwordLength'];
 var_dump($sceltaLength);
 
+
+function generaPasswordCasuale($lunghezza) {
+    //creiamo una stringa con tutti i simboli che vogliamo utilizzare
+    $caratteri = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?@#$%*-_';
+    //prendiamo la lunghezza della stringa
+    $lunghezzaCaratteri = strlen($caratteri);
+    //inizializiamo una variabile vuota dove ci pusheremo gli elementi singoli
+    $password = '';
+
+    //facciamo un ciclo fino alla lunghezza che inseriamo nell' input
+    for ($i = 0; $i < $lunghezza; $i++) {
+        //generare un numero casuale compreso tra 0 e $lunghezzaCaratteri e utilizza questo numero per selezionare un carattere casuale dalla stringa $caratteri 
+        $carattereCasuale = $caratteri[rand(0, $lunghezzaCaratteri) - 1];
+        //aggingiamo ogni carattere trovato alla variabile $password
+        $password .= $carattereCasuale;
+    }
+
+    return $password;
+}
+generaPasswordCasuale($sceltaLength);
+var_dump(generaPasswordCasuale($sceltaLength));
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +66,7 @@ var_dump($sceltaLength);
 
 <body>
     <h1 class="text-center">GENERATORE PASSWORDS</h1>
-    <div class="w-75 mx-auto bg-color-pink">
+    <div class="w-75 mx-auto bg-color-pink pt-5">
         <form class="row g-3">
             <div class="col-auto">
                 <h4>Lunghezza password</h4>
@@ -56,9 +80,9 @@ var_dump($sceltaLength);
             </div>
         </form>
 
+        <p> <?php echo generaPasswordCasuale($sceltaLength)?></p>
     </div>
 
-    <p> <?php echo $sceltaLength?></p>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
