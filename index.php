@@ -25,10 +25,7 @@ Dare all’utente anche la possibilità di permettere o meno la ripetizione di c
 
 
 
-// include __DIR__ . '/include/partials/function.php';
-// session_start();
 
-// $_SESSION['password'] = generaPasswordCasuale($sceltaLength);
 ?>
 
 <!DOCTYPE html>

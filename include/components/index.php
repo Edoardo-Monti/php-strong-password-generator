@@ -13,6 +13,6 @@ include __DIR__ . '/../partials/function.php';
     <title>Document</title>
 </head>
 <body>
-    <p>la tua password è:  <?php echo generaPasswordCasuale($sceltaLength) ?> </p>
+    <p>la tua password è:  <?php echo generaPasswordCasuale() ?> </p>
 </body>
 </html>
