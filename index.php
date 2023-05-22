@@ -26,7 +26,9 @@ Dare all’utente anche la possibilità di permettere o meno la ripetizione di c
 
 
 include __DIR__ . '/include/partials/function.php';
+session_start();
 
+$_SESSION['password'] = generaPasswordCasuale($sceltaLength);
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +46,7 @@ include __DIR__ . '/include/partials/function.php';
 <body>
     <h1 class="text-center">GENERATORE PASSWORDS</h1>
     <div class="w-75 mx-auto bg-color-pink pt-5">
-        <form class="row g-3">
+        <form class="row g-3" action="./include/components/index.php" method="GET">
             <div class="col-auto">
                 <h4>Lunghezza password</h4>
             </div>
@@ -57,7 +59,7 @@ include __DIR__ . '/include/partials/function.php';
             </div>
         </form>
 
-        <p> <?php echo generaPasswordCasuale($sceltaLength)?></p>
+        
     </div>
 
 
